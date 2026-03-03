@@ -50,6 +50,11 @@ SELECT w.candidate_id, w.full_name, w.specialty, o.interview_room
 FROM written_exam AS w
 INNER JOIN oral_exam AS o
 ON w.candidate_id = o.candidate_id;
+
+or 
+
+select t1.candidate_id, t1.full_name , specialty , interview_room 
+from public.oral_exam as t1 inner join public.written_exam as t2 using (candidate_id)
 ```
 
 </details>
